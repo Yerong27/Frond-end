@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML Study Notes">
+    <meta name="author" content="Yerong Li">
+    <title>HTML Study Notes</title>
+    <link rel="icon" href="00083.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="flex-container">
+
+        <h1>HTML Basics</h1>
+        <nav id="primarynav">
+            <!--Change below to linked button with CSS-->
+            <ul>
+                <img src="HTML5.png" al="HTML5 logo" id="html_logo">
+                <li>
+                    <a href="#Intro">Introduction</a>
+                </li>
+                <li>
+                    <a href="#E&A">Element & Attributes</a>
+                </li>
+                <li>
+                    <a href="#H&P">Headings & Paragraphs</a>
+                </li>
+                <li>
+                    <a href="#S&F">Styling & Formatting</a>
+                </li>
+                <li>
+                    <a href="#L&I">Links & Images</a>
+                </li>
+                <li><a href="#" class="active">Back to Top</a></li>
+                <li class="dropdown"><a href="javascript: void(0)" class="active">Dropdown</a>
+                    <div class="dropdown-content">
+                        <a href="img_gallery.html" target="_blank">Image Gallery</a>
+                        <a href="table.html" target="_blank">Table</a>
+                        <a href="form.html" target="_blank">Form</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="fulltext">
+        <section id="Intro">
+            <h2>Introduction</h2>
+            <h4 id="html_definition">What is HTML?</h4>
+            <!--Add a dropdown to below div-->
+            <div class="hiddentext">
+                <p>Check <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Doc</a> for
+                    detailed explanation.</p>
+            </div>
+            <details>
+                <summary>Some <em>possible answers...</em></summary>
+                <!--em refers to emphasis, which is semantic element, show as italic-->
+                <ul class="list1">
+                    <li>HTML stands for <strong>Hyper Text Markup Language</strong></li>
+                    <li>HTML is the standard markup language for creating Web pages</li>
+                    <li>HTML describes the structure of a Web page</li>
+                    <li>HTML consists of a series of elements</li>
+                    <li>HTML elements tell the browser how to display the content</li>
+                    <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this
+                        is a
+                        link",
+                        etc.</li>
+                </ul>
+            </details>
+            <h4>HTML Comments</h4>
+            <p class="codebox"><code>!--Write your comments here --</code></p>
+        </section>
+        <hr>
+        <section id="E&A">
+            <h2>Elements & Attributes</h2>
+            <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
+
+            <table class="table1">
+                <caption>What is an HTML <strong>element</strong>?</caption>
+                <tr>
+                    <th>Start tag</th>
+                    <th>Element content</th>
+                    <th>End tag</th>
+                </tr>
+                <tr>
+                    <td><code class="code">h1</code></td>
+                    <td>My first headings.</td>
+                    <td><code class="code">/h1</code></td>
+                </tr>
+                <tr>
+                    <td><code class="code">p</code></td>
+                    <td>My first paragraph.</td>
+                    <td><code class="code">/p</code></td>
+                </tr>
+                <tr>
+                    <td><code class="code">br</code></td>
+                    <td>None</td>
+                    <td><i>none<i></td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section id="H&P">
+            <h2>Headings & Paragraphs</h2>
+            <p>HTML headings are defined with the <code class="code">h1</code> to <code>h6</code>
+                tags. <code>h1</code> defines the most important heading. <code>h6</code> defines the
+                least important heading.</p>
+
+            <div class="notes">
+                <p>
+                    <Strong>Note: </Strong>Browsers automatically add some white space (a margin) before and after a
+                    heading. Use HTML headings for headings only. Don't use headings to make text
+                    <strong>BIG</strong> or
+                    <strong>bold</strong>.
+                </p>
+            </div>
+            <pre class="codetext">
+<code>!DOCTYPE html</code>
+<code>html</code>
+<code>body</code>
+
+  <code>h1</code>Heading 1<code>/h1</code>
+  <code>h2</code>Heading 2<code>/h2</code>
+  <code>h3</code>Heading 3<code>/h3</code>
+  <code>h4</code>Heading 4<code>/h4</code>
+  <code>h5</code>Heading 5<code>/h5</code>
+  <code>h6</code>Heading 6<code>/h6</code>
+
+<code>/body</code>
+
+<code>/html</code>
+    </pre>
+            <p>The HTML <code>p</code> element defines a paragraph. A paragraph always starts on a new line, and
+                browsers automatically add some white space (a margin) before and after a paragraph.
+            </p>
+            <p>The <code>hr</code> tag defines a thematic break in an HTML page, and is most often displayed as a
+                horizontal rule. <br>The <code>hr</code> element is used to separate content (or define a change) in
+                an
+                HTML
+                page, which is an empty tag, which means that it has no end tag.</p>
+            <p>The HTML <code>br</code> element defines a line break. Use <code>br</code> if you want a line
+                break (a new line) without starting a new paragraph.<br>The <code>br</code> tag is an empty tag,
+                which
+                means that it has no end tag.
+            </p>
+            <p>The HTML <code>pre</code> element defines preformatted text.<br>The text inside a
+                <code>pre</code> element is displayed in a fixed-width font (usually Courier), and it preserves both
+                spaces and line breaks.
+            </p>
+        </section>
+        <hr>
+        <section id="S&F">
+            <h2>Styling & Formatting</h2>
+            <p>Setting the style of an HTML element, can be done with the <span class="textcode">style</span>
+                attribute. The HTML <span class="textcode">style</span>
+                attribute has the following syntax:</p>
+            <p class="syntax">&lt;tagname style="property:value;"&gt;&lt;/tagname&gt;</p>
+            <p>The CSS <span class="textcode">background-color</span> property defines the background color for an HTML
+                element.</p>
+            <p>The CSS <span class="textcode">color</span> property defines the text color for an HTML element.</p>
+            <p>The CSS <span class="textcode">font-size</span> property defines the text size for an HTML element.</p>
+            <p>The CSS <span class="textcode">text-align</span> property defines the horizontal text alignment for an
+                HTML
+                element</p>
+            <br>
+            <details open>
+                <summary>Formatting elements were designed to display special types of text:</summary>
+                <ul>
+                    <li><code>b</code> - Bold text</li>
+                    <li><code>strong</code> - Important text</li>
+                    <li><code>i</code> - Italic text</li>
+                    <li><code>em</code> - Emphasized text</li>
+                    <li><code>mark</code> - Marked text</li>
+                    <li><code>small</code> - Smaller text</li>
+                    <li><code>del</code> - Deleted text</li>
+                    <li><code>ins</code> - Inserted text</li>
+                    <li><code>sub</code> - Subscript text</li>
+                    <li><code>sup</code> - Superscript text</li>
+                </ul>
+            </details>
+
+            <h4>Colors</h4>
+            <dl>
+                <dt>RGB Color Values</dt>
+                <dd>An RGB color value represents RED, GREEN, and BLUE light sources. <br>
+                    Each parameter (red, green, and blue) defines the intensity of the color with a value between 0 and
+                    255.
+                </dd>
+                <dt>HEX Color Values</dt>
+                <dd>A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue)
+                    hexadecimal
+                    integers specify the components of the color.<br>
+                    Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal
+                    0-255).</dd>
+                <dt>HSL Color Values</dt>
+                <dd>HSL stands for hue, saturation, and lightness.<br>
+                    Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.<br>
+                    Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.<br>
+                    Lightness is also a percentage value. 0% is black, and 100% is white.
+                </dd>
+            </dl>
+            <!--Change below to a real colorbar with JS later-->
+            <figure>
+                <img src="colorbar.png" title="This is an RGB example." loading="lazy" />
+                <figcaption>Example of RGB Color Values</figcaption>
+            </figure>
+
+        </section>
+        <hr>
+        <section id="L&I">
+            <div class="showbox">
+                <h2>Links & <a href="img_gallery.html" target="_blank">Images</a></h2>
+                <div class="hiddenbox">
+                    <p>click "Images" to check more image examples.</p>
+                </div>
+            </div>
+            <p>HTML links are hyperlinks. The HTML <code>a</code> tag defines a hyperlink. It has the following syntax:
+            </p>
+            <p class="syntax">&lt;a href="url"&gt;link text&lt;/a&gt;</p>
+            <details open>
+                <summary>By default, links will appear as follows in all browsers:</summary>
+                <ul>
+                    <li>An unvisited link is <span id="underlined">underlined</span> and <span id="blue">blue</span>
+                    </li>
+                    <li>A visited link is <span id="underlined">underlined</span> and <span id="purple">purple</span>
+                    </li>
+                    <li>An active link is <span id="underlined">underlined</span> and <span id="red">red</span></li>
+                </ul>
+            </details>
+            <!--Add below with JS later-->
+            <!-- <dl>
+            <dt>Image as a link</dt>
+            <dd><a></a></dd>
+            <dt>Button as a link</dt>
+            <dd></dd>
+
+        </dl> -->
+            <h4>Favicon</h4>
+            <p>A favicon is a small image displayed next to the page title in the browser tab. Use the HTML
+                <code>link</code> element to insert a favicon
+            </p>
+            <p class="syntax">&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</p>
+
+            <h4>Page Title</h4>
+            <p>Page title is to describe the meaning of the page. The page title is very important for search engine
+                optimization (SEO). The <code>title</code> element adds a title to your page</p>
+        </section>
+
+        <hr>
+        <footer>
+            <p>Want more? Check <a href="advanced.html" target="_blank">HTML Advance</a> page.</p>
+            &lt;&lt;&lt;&copy;<a href="about.html" target="_blank">Yerong Li</a>&gt;&gt;&gt;
+        </footer>
+    </section>
+</body>
+
+</html>

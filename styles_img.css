@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 10px;
+}
+
+.gallery {
+    flex: 1;
+    /* 自动平均分配宽度 */
+    max-width: calc(100% / 4);
+    /* 最大宽度，这里假设有四个图片 */
+    display: flex;
+    flex-direction: column;
+    /*flex-direction使得desc位于图片下方。它们作为一个整体包含在.pics里，对于pics内的元素来说，flex-direction为column*/
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    /*产生polaroid的效果*/
+    padding: 0;
+}
+
+/* div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+} */
+
+div.gallery:hover {
+    /* border: 1px solid #777; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

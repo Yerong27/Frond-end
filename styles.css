@@ -1,0 +1,282 @@
+/* body {
+    background-color: #333;
+    color: whitesmoke;
+} */
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#html_logo {
+    position: absolute;
+    top: 5px;
+    left: 15%;
+}
+
+#primarynav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    height: 100%;
+    overflow: auto;
+}
+
+#primarynav ul {
+
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#primarynav a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+#primarynav li a.active {
+    color: rgb(10, 110, 196);
+}
+
+#primarynav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#primarynav .dropdown {
+    position: relative;
+}
+
+#primarynav .dropdown-content {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s .3s, visibility .6s;
+    /*延迟淡出效果*/
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px 16px;
+    z-index: 1;
+}
+
+#primarynav .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s;
+}
+
+#fulltext {
+    margin-left: 20%;
+    margin-right: 5%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* #primarynav a {
+    text-decoration: none;
+} */
+#underlined {
+    text-decoration: underline;
+}
+
+#purple {
+    color: purple;
+}
+
+#blue {
+    color: blue;
+}
+
+#red {
+    color: red;
+}
+
+
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    /*加了collapse才能使border为单线*/
+    width: 40%;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+tr:hover {
+    background-color: coral;
+}
+
+
+/* #html_definition {
+    position: relative;
+    display: inline-block;
+}
+
+.hiddentext {
+    display: none;
+    position: absolute;
+
+    max-width: 50px;
+    height: 20px;
+
+    background-color: gray;
+}
+
+#html_definition:hover .hiddentext {
+    display: block;
+} */
+a {
+    text-decoration: none;
+    color: rgb(10, 110, 196);
+}
+
+a:visited {
+    color: rgb(10, 110, 196);
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+    color: #f85050;
+}
+
+code {
+    background-color: lightyellow;
+    border: 1px solid lightgray;
+    color: darkred;
+}
+
+.codebox {
+    text-align: center;
+}
+
+.codetext {
+
+    border: 1px solid lightgray;
+    background-color: lightyellow;
+    width: 30%;
+    text-align: left;
+    margin: auto;
+}
+
+.codetext code {
+    border: none;
+}
+
+.notes {
+    background-color: yellow;
+    padding: 0.5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.syntax {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-left: 3px solid green;
+    padding: 10px;
+    width: 30%;
+    height: 30px;
+    margin: auto;
+}
+
+.textcode {
+    color: red;
+    border: 1px solid lightgray;
+    background-color: rgba(230, 225, 225, 0.4);
+}
+
+.showbox {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+.hiddenbox {
+    display: none;
+    position: absolute;
+    /*position: absolute使得位置固定，不会挤占别的元素*/
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px 16px;
+    z-index: 1;
+    /* border: 1px solid yellow; */
+}
+
+.showbox:hover .hiddenbox {
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+dt {
+    font-weight: bold;
+    text-decoration: underline lightgray;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+code::before {
+    content: "<"
+}
+
+code::after {
+    content: ">"
+}
+
+h4::before {
+    content: ">>>";
+}
+
+/*h4 directly followed by ::before, no space in between.*/
+/*can directly write ">", no need to use writing method of HTML entities.*/
+
+/* .table1 {}
+
+.code {} */

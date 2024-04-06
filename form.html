@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Image gallery for HTML study notes">
+    <meta name="author" content="Yerong Li">
+    <title>Iamges Gallery</title>
+    <link rel="icon" href="00083.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles_form.css">
+</head>
+
+<body>
+    <form>
+        <div class="header">
+            <h1>Film Trivia</h1>
+        </div>
+        <br>
+        <fieldset>
+            <legend><strong>Question 1</strong></legend>
+            <div class="container">
+                <div class="gallery">
+                    <a href="imgs/IMG_8.jpg" target="_blank">
+                        <img src="imgs/IMG_8.jpg" alt="Agent Cooper" style="width:400px;height: 400px;">
+                    </a>
+                </div>
+                <div class="questions">
+                    <p>
+                        <label for="names">What's this character's name?</label>
+                        <select id="names" name="names">
+                            <option value="" selected>-- Please Select --</option>
+                            <option value="Gordon Cole">Gordon Cole</option>
+                            <option value="Paul Atreides">Paul Atreides</option>
+                            <option value="Dale Cooper">Dale Cooper</option>
+                        </select>
+                        <!--这个select&option的写法，必须在tags间加内容，否则选项不可见。只能从select的options中选择-->
+                    </p>
+                    <p>
+                        <span>Which film/TV series he is from?</span>
+                        <input type="radio" id="BlueVelvet" name="Film1" value="Blue Velvet">
+                        <label for="BlueVelvet" value="Blue Velvet">Blue Velvet</label>
+                        <input type="radio" id="TwinPeaks" name="Film1" value="Twin Peaks">
+                        <label for="TwinPeaks" value="Twin Peaks">Twin Peaks</label>
+                        <input type="radio" id="Dune" name="Film1" value="Dune">
+                        <label for="Dune" value="Dune">Dune</label>
+                        <input type="radio" id="Agents of SHIELD" name="Film1" value="Agents of SHIELD">
+                        <label for="Agents of SHIELD" value="Agents of SHIELD">Agents of S.H.I.E.L.D.</label>
+                    </p>
+                    <p>
+                        <span>What's his favorite food & drink? (multiple)</span>
+                        <input type="checkbox" id="food1" name="food1" value="Donuts">
+                        <label for="food1">Donuts</label>
+                        <input type="checkbox" id="food2" name="food2" value="Sushi">
+                        <label for="food2">Sushi</label>
+                        <input type="checkbox" id="food3" name="food3" value="Cherry Pie">
+                        <label for="food3">Cherry Pie</label>
+                        <input type="checkbox" id="food4" name="food4" value="Coca Cola">
+                        <label for="food4">Coca Cola</label>
+                        <input type="checkbox" id="food5" name="food5" value="Coffee">
+                        <label for="food5">Coffee</label>
+                    </p>
+                    <p>
+                        <span>Which day he entered into the town?</span>
+                        <input type="date" name="dateintown">
+                    </p>
+                    <p>
+                        <span>Who is the director of this film/TV series?</span>
+                        <input list="director">
+                        <datalist id="director">
+                            <option value="Woody Allen"></option>
+                            <option value="David Bowie"></option>
+                            <option value="David Lynch"></option>
+                            <option value="Stanley Kubrick"></option>
+                        </datalist>
+                        <!--这个input&datalist&option的写法，tags间不用加内容，选项仍可见，为value。可以写其它的，option的value只是提示作用-->
+                    </p>
+                </div>
+            </div>
+
+
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><strong>Question 2</strong></legend>
+            <p>1. Call him by his name</p>
+            <div class="container">
+                <div class="pics">
+                    <img src="imgs/IMG_9.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <label for="name1">Name This Actor:</label>
+                    <input type="text" id="name1" name="name1">
+                    <!-- <div class="desc">Add a description of the image here</div> -->
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_10.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <label for="name2">Name This Actor:</label>
+                    <input type="text" id="name2" name="name2">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_11.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <label for="name3">Name This Actor:</label>
+                    <input type="text" id="name3" name="name3">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_12.png" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <label for="name4">Name This Actor:</label>
+                    <input type="text" id="name4" name="name4">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_13.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <label for="name5">Name This Actor:</label>
+                    <input type="text" id="name5" name="name5">
+                </div>
+            </div>
+
+            <p>2. Who has won an Oscar? (multiple)</p>
+            <div class="container">
+                <div class="pics">
+                    <img src="imgs/IMG_9.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <input type="checkbox" name="oscar" value="Ben Affleck">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_10.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <input type="checkbox" name="oscar" value="Ryan Gosling">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_11.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <input type="checkbox" name="oscar" value="Robert Pattinson">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_12.png" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <input type="checkbox" name="oscar" value="Ryuichi Sakamoto">
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_13.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <input type="checkbox" name="oscar" value="Leslie Cheung">
+                </div>
+            </div>
+
+            <p>3. Select the movie(s) he featured in</p>
+            <div class="container">
+                <div class="pics">
+                    <img src="imgs/IMG_9.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <select name="movie1" size="6" multiple>
+                        <option value="La La Land"><cite>La La Land</cite></option>
+                        <option value="Live by Night"><cite>Live by Night</cite></option>
+                        <option value="Merry Christmas, Mr. Lawrence"><cite>Merry Christmas, Mr. Lawrence</cite>
+                        </option>
+                        <option value="The Batman"><cite>The Batman</cite></option>
+                        <option value="The Accountant"><cite>The Accountant</cite></option>
+                        <option value="Barbie"><cite>Barbie</cite></option>
+                        <option value="Happy Together"><cite>Happy Together</cite></option>
+                        <option value="Twilight"><cite>Twilight</cite></option>
+                        <option value="Ashes of Time"><cite>Ashes of Time</cite></option>
+                    </select>
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_10.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <select name="movie2" size="6" multiple>
+                        <option value="La La Land"><cite>La La Land</cite></option>
+                        <option value="Live by Night"><cite>Live by Night</cite></option>
+                        <option value="Merry Christmas, Mr. Lawrence"><cite>Merry Christmas, Mr. Lawrence</cite>
+                        </option>
+                        <option value="The Batman"><cite>The Batman</cite></option>
+                        <option value="The Accountant"><cite>The Accountant</cite></option>
+                        <option value="Barbie"><cite>Barbie</cite></option>
+                        <option value="Happy Together"><cite>Happy Together</cite></option>
+                        <option value="Twilight"><cite>Twilight</cite></option>
+                        <option value="Ashes of Time"><cite>Ashes of Time</cite></option>
+                    </select>
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_11.jpeg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <select name="movie3" size="6" multiple>
+                        <option value="La La Land"><cite>La La Land</cite></option>
+                        <option value="Live by Night"><cite>Live by Night</cite></option>
+                        <option value="Merry Christmas, Mr. Lawrence"><cite>Merry Christmas, Mr. Lawrence</cite>
+                        </option>
+                        <option value="The Batman"><cite>The Batman</cite></option>
+                        <option value="The Accountant"><cite>The Accountant</cite></option>
+                        <option value="Barbie"><cite>Barbie</cite></option>
+                        <option value="Happy Together"><cite>Happy Together</cite></option>
+                        <option value="Twilight"><cite>Twilight</cite></option>
+                        <option value="Ashes of Time"><cite>Ashes of Time</cite></option>
+                    </select>
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_12.png" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <select name="movie4" size="6" multiple>
+                        <option value="La La Land"><cite>La La Land</cite></option>
+                        <option value="Live by Night"><cite>Live by Night</cite></option>
+                        <option value="Merry Christmas, Mr. Lawrence"><cite>Merry Christmas, Mr. Lawrence</cite>
+                        </option>
+                        <option value="The Batman"><cite>The Batman</cite></option>
+                        <option value="The Accountant"><cite>The Accountant</cite></option>
+                        <option value="Barbie"><cite>Barbie</cite></option>
+                        <option value="Happy Together"><cite>Happy Together</cite></option>
+                        <option value="Twilight"><cite>Twilight</cite></option>
+                        <option value="Ashes of Time"><cite>Ashes of Time</cite></option>
+                    </select>
+                </div>
+                <div class="pics">
+                    <img src="imgs/IMG_13.jpg" alt="Actor" style="width:200px;height: 200px;"><br>
+                    <select name="movie5" size="6" multiple>
+                        <option value="La La Land"><cite>La La Land</cite></option>
+                        <option value="Live by Night"><cite>Live by Night</cite></option>
+                        <option value="Merry Christmas, Mr. Lawrence"><cite>Merry Christmas, Mr. Lawrence</cite>
+                        </option>
+                        <option value="The Batman"><cite>The Batman</cite></option>
+                        <option value="The Accountant"><cite>The Accountant</cite></option>
+                        <option value="Barbie"><cite>Barbie</cite></option>
+                        <option value="Happy Together"><cite>Happy Together</cite></option>
+                        <option value="Twilight"><cite>Twilight</cite></option>
+                        <option value="Ashes of Time"><cite>Ashes of Time</cite></option>
+                        <!--字体效果在option里不起作用，比如cite, strong-->
+                    </select>
+                </div>
+            </div>
+
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><strong>Contact Me</strong></legend>
+            <p>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Woody">
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Allen">
+            </p>
+            <label for="message">Message me!</label><br>
+            <textarea id="message" name="message" rows="10" cols="70" placeholder="Please Type Here."></textarea>
+            <!--textarea的start tag和end tag间不要有空。否则placeholder不能正常显示。优先显示tag间的内容，作为实体，输入时需删除。但placeholder的内容非实体，点击即从头输入-->
+            <div class="button">
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                <button type="reset">Reset</button>
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
